@@ -1,4 +1,8 @@
-import {Bell, Droplets, Flame, Star} from "lucide-react";
+"use client";
+
+import { useState } from "react";
+import { Bell, Droplets, Flame, Star } from "lucide-react";
+import NotificationPanel from "./NotificationPanel";
 
 interface HeaderTopProps {
     streak: number;
@@ -6,6 +10,8 @@ interface HeaderTopProps {
 }
 
 export default function Header({ streak, energy }: HeaderTopProps) {
+    const [showNotifications, setShowNotifications] = useState(false);
+
     return (
         <header className="w-full bg-white border-b border-gray-200">
 
@@ -38,10 +44,20 @@ export default function Header({ streak, energy }: HeaderTopProps) {
                     </div>
 
                     {/* notification */}
-                    <div className="relative text-gray-500">
-                        <Bell size={20} />
+                    <div className="relative">
+                        <button
+                            onClick={() => setShowNotifications((v) => !v)}
+                            className="relative text-gray-500 hover:text-gray-700 transition-colors p-1 rounded-full hover:bg-gray-100 cursor-pointer"
+                        >
+                            <Bell size={20} />
+                            <span className="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full" />
+                        </button>
 
-                        <span className="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+                        {showNotifications && (
+                            <NotificationPanel
+                                onClose={() => setShowNotifications(false)}
+                            />
+                        )}
                     </div>
 
                 </div>
