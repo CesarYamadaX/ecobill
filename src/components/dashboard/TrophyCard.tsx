@@ -13,7 +13,7 @@ export default function TrophyCard({ logo, name, dots = 1, unlocked = true }: Tr
         <div
             className={`
         flex flex-col items-center gap-2 p-3 rounded-2xl
-        transition-all duration-200
+        transition-all duration-200 cursor-pointer hover:scale-105
         ${unlocked
                 ? 'bg-[#1e2d3d]'
                 : 'bg-[#1a2530] opacity-50'

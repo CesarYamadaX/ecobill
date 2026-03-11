@@ -17,7 +17,7 @@ export default function TabSelector({ active, onChange }: TabSelectorProps) {
                     key={tab}
                     onClick={() => onChange(tab)}
                     className={`
-            flex-1 py-2 text-sm font-semibold rounded-xl transition-all duration-300
+            flex-1 py-2 text-sm font-semibold rounded-xl transition-all duration-300 cursor-pointer
             ${active === tab
                         ? 'bg-white text-slate-800 shadow-sm'
                         : 'text-slate-400 hover:text-slate-600'

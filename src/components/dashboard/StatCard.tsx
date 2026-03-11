@@ -10,7 +10,7 @@ export default function StatCard({ label, value, highlight, delay = 0, visible }
     return (
         <div
             className={`
-        flex flex-col items-center justify-center rounded-2xl px-4 py-3 transition-all duration-700
+        flex flex-col items-center justify-center rounded-2xl px-4 py-3 transition-all duration-700 cursor-pointer
         ${highlight ? 'bg-emerald-50 border border-emerald-100' : 'bg-slate-50'}
       `}
             style={{

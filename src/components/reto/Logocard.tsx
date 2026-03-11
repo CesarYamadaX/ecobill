@@ -18,7 +18,7 @@ export default function LogroCard({ logro }: { logro: Logro }) {
     const active = logro.unlocked;
 
     return (
-        <div className={`rounded-2xl p-4 flex flex-col items-center gap-2 text-center
+        <div className={`rounded-2xl p-4 flex flex-col items-center gap-2 text-center cursor-pointer transition-all duration-200 hover:scale-[1.02]
             ${active ? 'bg-amber-50' : 'bg-slate-50'}`}>
             <div className={`w-14 h-14 rounded-2xl flex items-center justify-center
                 ${active ? 'bg-amber-400' : 'bg-slate-200'}`}>

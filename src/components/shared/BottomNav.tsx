@@ -27,7 +27,7 @@ export default function BottomNav() {
                     <button
                         key={index}
                         onClick={() => router.push(item.href)}
-                        className={`flex flex-col items-center text-xs gap-1 transition-colors
+                        className={`flex flex-col items-center text-xs gap-1 transition-colors cursor-pointer
                             ${pathname === item.href
                             ? "text-teal-500"
                             : "text-gray-500 hover:text-gray-700"
